@@ -1,10 +1,10 @@
 import React from 'react'
+import Layout from './components/layouts/Layout'
+
 const App = () => {
   return (
     <>
-   <h1>
-    Hello
-   </h1>
+      <Layout />
     </>
   )
 }
