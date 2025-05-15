@@ -1,0 +1,88 @@
+.ce-toolbar__content,
+.ce-block__content{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ========== BASE BLOCKS ========== */
+.ce-block {
+  @apply my-1;
+}
+
+.ce-block__content {
+  @apply px-1;
+}
+
+.ce-toolbar__content {
+  @apply dark:bg-zinc-800 dark:border-zinc-700;
+}
+
+/* ========== PARAGRAPH ========== */
+.ce-paragraph {
+  @apply text-base text-zinc-800 dark:text-zinc-200 leading-relaxed;
+}
+
+/* Placeholder when block is empty */
+.ce-paragraph[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  @apply text-zinc-400 dark:text-zinc-500 italic;
+}
+
+/* ========== HEADERS ========== */
+.ce-header {
+  @apply font-semibold text-slate-800 dark:text-slate-200;
+}
+
+.ce-header[data-level="1"] {
+  @apply text-3xl;
+}
+
+.ce-header[data-level="2"] {
+  @apply text-2xl;
+}
+
+.ce-header[data-level="3"] {
+  @apply text-xl;
+}
+
+/* ========== LISTS ========== */
+.cdx-block .cdx-list {
+  @apply list-disc ml-6 text-zinc-700 dark:text-zinc-300;
+}
+
+.cdx-list__item {
+  @apply mb-1;
+}
+
+/* ========== QUOTES ========== */
+.cdx-quote {
+  @apply border-l-4 pl-4 italic text-zinc-600 dark:text-zinc-300 border-zinc-300 dark:border-zinc-600;
+}
+
+.cdx-quote__text {
+  @apply mb-1;
+}
+
+.cdx-quote__caption {
+  @apply text-sm text-zinc-500 dark:text-zinc-400;
+}
+
+/* ========== INLINE TOOLBAR ========== */
+.ce-inline-toolbar {
+  @apply bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-sm rounded;
+}
+
+/* ========== BLOCK SETTINGS / DELETE / MOVE ========== */
+.ce-settings,
+.ce-toolbar__settings-btn {
+  @apply dark:bg-zinc-700;
+}
+
+.ce-popover,
+.ce-toolbar__plus {
+  @apply bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 shadow;
+}
+
+.ce-popover__item-icon {
+  @apply dark:text-zinc-100;
+}
