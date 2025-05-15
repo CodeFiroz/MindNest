@@ -6,7 +6,7 @@
 
 /* ========== BASE BLOCKS ========== */
 .ce-block {
-  @apply my-1;
+  @apply my-0;
 }
 
 .ce-block__content {
@@ -31,6 +31,7 @@
 /* ========== HEADERS ========== */
 .ce-header {
   @apply font-semibold text-slate-800 dark:text-slate-200;
+  @apply text-2xl;
 }
 
 .ce-header[data-level="1"] {
