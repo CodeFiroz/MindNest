@@ -7,7 +7,7 @@ const UserAvatar = ({
     styles
 }) => {
   return (
-    <div className={`w-full rounded p-2 py-1 cursor-pointer flex items-center gap-3 hover:bg-zinc-100 ${styles}`}>
+    <div className={`w-full rounded p-2 py-1 cursor-pointer flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-stone-800 ${styles}`}>
 
         <img 
             className='w-8 h-8 rounded-full object-cover'
@@ -15,7 +15,7 @@ const UserAvatar = ({
             alt="" 
         />
       
-      <p className='text-zinc-700'>
+      <p className='text-zinc-700 dark:text-zinc-400'>
         {username}
       </p>
 
