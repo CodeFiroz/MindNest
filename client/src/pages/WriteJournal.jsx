@@ -90,7 +90,7 @@ const WriteJournal = () => {
           </div>
 
           <div className="flex my-4 gap-3">
-            <button className="bg-amber-400 border border-orange-200 cursor-pointer text-xs lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2">
+            <button onClick={()=> navigator.clipboard.writeText(data)} className="bg-amber-400 border border-orange-200 cursor-pointer text-xs lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2">
               <span className="text-stone-800">
                 <NotebookPen size={14} />
               </span>
