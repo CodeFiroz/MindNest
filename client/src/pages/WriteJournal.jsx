@@ -17,7 +17,6 @@ const WriteJournal = () => {
     if (e.key === "Enter") {
       titleRef.current.blur();
     }
-
   };
 
   const handleCover = useCallback((e) => {
@@ -34,29 +33,18 @@ const WriteJournal = () => {
       setCover(reader.result); // use base64 for immediate preview
     };
     reader.readAsDataURL(file);
-  }, [])
-
-
-
+  }, []);
 
   return (
-    <div className="w-full flex justify-center  items-end">
-      <div className="w-5/6 mt-10">
+    <div className="w-full flex flex-col justify-center items-center">
+        {cover && <CoverBlock cover={cover} handleCoverPhoto={setCover} />}
+      <div className="lg:w-5/6 w-full p-5">
 
-        {cover && (
-          <CoverBlock
-            cover={cover}
-            handleCoverPhoto={setCover}
-          />
-        )}
-
-
-
-        <div className="flex mb-5 justify-between items-center">
+        <div className="flex mb-5 justify-between items-center gap-2">
           <div className="flex my-4 gap-3">
             <button
               onClick={() => setShowEmoji(true)}
-              className="bg-zinc-100 border border-zinc-200 cursor-pointer text-xs lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2 dark:bg-stone-700 dark:border-stone-800 dark:text-zinc-300"
+              className="bg-zinc-100 border border-zinc-200 cursor-pointer text-[10px] lg:text-sm px-1 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2 dark:bg-stone-700 dark:border-stone-800 dark:text-zinc-300"
             >
               {mood !== null ? (
                 <span>{mood}</span>
@@ -76,12 +64,17 @@ const WriteJournal = () => {
               />
             )}
 
-
-
-
-
-            <input type="file" id="cover" accept="image/*" onChange={(e) => handleCover(e)} hidden />
-            <label htmlFor="cover" className="bg-zinc-100 border border-zinc-200 cursor-pointer text-xs lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2 dark:bg-stone-700 dark:border-stone-800 dark:text-zinc-300" >
+            <input
+              type="file"
+              id="cover"
+              accept="image/*"
+              onChange={(e) => handleCover(e)}
+              hidden
+            />
+            <label
+              htmlFor="cover"
+              className="bg-zinc-100 border border-zinc-200 cursor-pointer text-[10px] lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2 dark:bg-stone-700 dark:border-stone-800 dark:text-zinc-300"
+            >
               <span className="text-teal-500">
                 <Image size={14} />
               </span>
@@ -90,7 +83,10 @@ const WriteJournal = () => {
           </div>
 
           <div className="flex my-4 gap-3">
-            <button onClick={()=> navigator.clipboard.writeText(data)} className="bg-amber-400 border border-orange-200 cursor-pointer text-xs lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2">
+            <button
+            onClick={()=> console.log(data)}
+              className="bg-amber-400 border border-orange-200 cursor-pointer text-[10px] lg:text-sm px-2 lg:px-3 py-1 lg:py-2 rounded flex items-center gap-2"
+            >
               <span className="text-stone-800">
                 <NotebookPen size={14} />
               </span>

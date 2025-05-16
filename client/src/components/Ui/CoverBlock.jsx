@@ -3,8 +3,8 @@ import React from 'react'
 const CoverBlock = ({cover, handleCoverPhoto}) => {
   return (
     <>
-        <div className="w-full h-60 flex justify-center items-center bg-zinc-700 rounded">
-          <div className="w-full h-60 flex justify-center items-center bg-zinc-700 rounded overflow-hidden relative">
+        <div className="w-full h-60 flex justify-center items-center bg-zinc-200 rounded">
+          <div className="w-full h-60 flex justify-center items-center bg-zinc-200 rounded overflow-hidden relative">
             {cover ? (
               <img src={cover} className="h-full object-cover" alt="Cover Preview" />
             ) : (

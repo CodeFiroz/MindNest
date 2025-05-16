@@ -47,19 +47,25 @@ const demoEditorData = {
         text: "Mood Tracker Tags",
         level: 3
       }
-    },
+    }, 
     {
       type: "list",
       data: {
-        style: "unordered",
+        style: "checklist",
         items: [
-          "Calm",
-          "Centered",
-          "Grateful",
-          "✨ Lowkey philosophical"
+          {content: "🧘 10 minutes of meditation", meta : {checked: true}, items: []},
+          {content: "📵 Put my phone in airplane mode (felt like I time-traveled)", meta : {checked: true}, items: []},
+          {content: "☀️ Took a walk in the sun — Vitamin D supremacy", meta : {checked: false}, items: []},
+         
         ]
       }
-    }
+    },
+    {
+      type: "codetool",
+      data: {
+        code: "<div className=\"w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 ...\">\n",
+      }
+    }, 
   ],
   version: "2.29.1"
 };

@@ -15,7 +15,7 @@ const Heading = ({ text, level = 1 }) => {
 
   const className = `${baseStyles} ${sizeMap[level] || 'text-base'}`;
 
-  return <Tag className={className}>{text}</Tag>;
+  return <Tag className={className + "text-zinc-900 dark:text-zinc-100"}>{text}</Tag>;
 };
 
 export default Heading;
