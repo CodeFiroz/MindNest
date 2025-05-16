@@ -7,6 +7,7 @@ import NoteCard from "../cards/NoteCard";
 import WriteJournal from "../../pages/WriteJournal";
 import ViewJournal from "../../pages/ViewJournal";
 import Habit from "../../pages/Habit";
+import Memories from "../../pages/Memories";
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -26,8 +27,7 @@ const Layout = () => {
         className={`
           fixed top-0 left-0 h-full z-50 bg-white shadow-md lg:shadow-none transition-transform duration-300
           lg:relative lg:translate-x-0 lg:w-1/5 
-          w-4/5 sm:w-3/5 ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          w-4/5 sm:w-3/5 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           }
         `}
       >
@@ -39,17 +39,19 @@ const Layout = () => {
           <Header SidebarOpen={isSidebarOpen} setSidebar={setIsSidebarOpen} />
         </div>
 
-          <Habit />
+
+        <Memories />
+        {/* <Habit /> */}
         {/* <ViewJournal /> */}
         {/* <WriteJournal /> */}
-        
+
         {/* <div className="grid grid-cols-2 lg:grid-cols-5  gap-3 p-3 lg:p-10">
           <NewNote />
           <NoteCard />
         </div> */}
 
         {/* <NoNotes /> */}
-        
+
       </div>
     </div>
   );

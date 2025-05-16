@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import HabitCard from "../components/cards/HabitCard";
 import DaySelector from "../utils/DaySelector";
-import HabitFab from "../components/Ui/HabitFab";
+import FabIcon from "../components/Ui/FabIcon";
 import { useState } from "react";
 import ManageHabits from "../components/modals/ManageHabits";
 import NewHabit from "../components/modals/NewHabit";
@@ -23,7 +23,7 @@ const habits = [
 
   return (
     <>
-    <HabitFab onClick={()=> setHabitForm(true)}/>
+    <FabIcon onClick={()=> setHabitForm(true)}/>
     {
       showManage && (
         <ManageHabits onClose={() => setShowmanage(false)} habits={habits} />

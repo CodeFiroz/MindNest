@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Grid2X2Plus, PencilIcon, Trash, X } from "lucide-react";
+import { Grid2X2Plus, X } from "lucide-react";
 import MoodSelector from "./MoodSelector";
 
 const NewHabit = ({ onClose }) => {

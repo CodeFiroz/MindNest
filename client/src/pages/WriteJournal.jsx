@@ -30,7 +30,7 @@ const WriteJournal = () => {
 
     const reader = new FileReader();
     reader.onloadend = () => {
-      setCover(reader.result); // use base64 for immediate preview
+      setCover(reader.result);
     };
     reader.readAsDataURL(file);
   }, []);

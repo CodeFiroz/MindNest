@@ -26,7 +26,7 @@ const Sidebar = ({ closeSidebar }) => {
 
         <NavItems
           icon={<Pin size={20} />}
-          label={"Notes"}
+          label={"Memories"}
           iconStyles={"group-hover:text-red-400"}
         />
 
@@ -35,11 +35,7 @@ const Sidebar = ({ closeSidebar }) => {
           label={"My Habits"}
           iconStyles={"group-hover:text-indigo-400"}
         />
-        <NavItems
-          icon={<Lightbulb size={20} />}
-          label={"Ideas"}
-          iconStyles={"group-hover:text-amber-500"}
-        />
+       
       </nav>
 
       <nav
