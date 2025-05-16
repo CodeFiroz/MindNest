@@ -1,11 +1,12 @@
-import React from "react";
 import EmojiPicker from "emoji-picker-react";
 import { X } from "lucide-react";
 
 const MoodSelector = ({ onClose, onEmojiSelect }) => {
+
+  
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center">
-      <div className="bg-white dark:bg-stone-900 rounded-2xl shadow-lg p-4 relative w-[90%] max-w-sm">
+      <div className="bg-white dark:bg-stone-900 rounded-2xl shadow-lg p-2 relative w-[90%] max-w-sm">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -19,7 +20,7 @@ const MoodSelector = ({ onClose, onEmojiSelect }) => {
           theme="dark"
           onEmojiClick={(emojiData) => {
             onEmojiSelect(emojiData.emoji);
-            onClose(); // Auto-close on select (optional)
+            onClose(); 
           }}
           width="100%"
           height={400}

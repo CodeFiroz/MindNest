@@ -16,10 +16,13 @@
     "@editorjs/list": "^2.0.8",
     "@editorjs/quote": "^2.7.6",
     "@editorjs/underline": "^1.2.1",
+    "clsx": "^2.1.1",
     "emoji-picker-react": "^4.12.2",
+    "framer-motion": "^12.12.1",
     "lucide-react": "^0.510.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

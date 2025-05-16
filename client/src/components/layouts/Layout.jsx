@@ -6,6 +6,7 @@ import NewNote from "../cards/NewNote";
 import NoteCard from "../cards/NoteCard";
 import WriteJournal from "../../pages/WriteJournal";
 import ViewJournal from "../../pages/ViewJournal";
+import Habit from "../../pages/Habit";
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -38,7 +39,8 @@ const Layout = () => {
           <Header SidebarOpen={isSidebarOpen} setSidebar={setIsSidebarOpen} />
         </div>
 
-        <ViewJournal />
+          <Habit />
+        {/* <ViewJournal /> */}
         {/* <WriteJournal /> */}
         
         {/* <div className="grid grid-cols-2 lg:grid-cols-5  gap-3 p-3 lg:p-10">
