@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
-import NoNotes from "../screens/NoNotes";
-import NewNote from "../cards/NewNote";
-import NoteCard from "../cards/NoteCard";
-import WriteJournal from "../../pages/WriteJournal";
-import ViewJournal from "../../pages/ViewJournal";
-import Habit from "../../pages/Habit";
-import Memories from "../../pages/Memories";
-import Profile from "../../pages/Profile";
-import Trash from "../../pages/Trash";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -41,20 +33,7 @@ const Layout = () => {
           <Header SidebarOpen={isSidebarOpen} setSidebar={setIsSidebarOpen} />
         </div>
 
-
-          <Trash />
-        {/* <Profile /> */}
-        {/* <Memories /> */}
-        {/* <Habit /> */}
-        {/* <ViewJournal /> */}
-        {/* <WriteJournal /> */}
-
-        {/* <div className="grid grid-cols-2 lg:grid-cols-5  gap-3 p-3 lg:p-10">
-          <NewNote />
-          <NoteCard />
-        </div> */}
-
-        {/* <NoNotes /> */}
+          <Outlet />
 
       </div>
     </div>

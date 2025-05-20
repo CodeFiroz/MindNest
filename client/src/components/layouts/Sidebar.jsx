@@ -22,18 +22,24 @@ const Sidebar = ({ closeSidebar }) => {
       <UserAvatar />
 
       <nav className="my-5 space-y-3" onClick={closeSidebar}>
-        <NavItems icon={<Notebook size={20} />} label={"Journal"} />
+        <NavItems 
+          icon={<Notebook size={20} />} 
+          label={"Journal"} 
+          nav={'/'}
+        />
 
         <NavItems
           icon={<Pin size={20} />}
           label={"Memories"}
           iconStyles={"group-hover:text-red-400"}
+          nav={'/memories'}
         />
 
         <NavItems
           icon={<BookHeart size={20} />}
           label={"My Habits"}
           iconStyles={"group-hover:text-indigo-400"}
+          nav={'/habit'}
         />
        
       </nav>
@@ -46,6 +52,7 @@ const Sidebar = ({ closeSidebar }) => {
           icon={<Trash size={20} />}
           label={"Trash"}
           iconStyles={"group-hover:text-red-300"}
+          nav={'/trash'}
         />
         <NavItems
           icon={<Archive size={20} />}
@@ -57,13 +64,10 @@ const Sidebar = ({ closeSidebar }) => {
           icon={<CircleUserRound size={20} />}
           label={"Profile"}
           iconStyles={"group-hover:text-teal-400"}
+          nav={'/me'}
         />
 
-        <NavItems
-          icon={<Cog size={20} />}
-          label={"Settings"}
-          iconStyles={"group-hover:text-indigo-500"}
-        />
+       
       </nav>
 
       <nav

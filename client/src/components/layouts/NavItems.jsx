@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavItems = ({
   icon,
   label,
-  link = "#",
+  nav = "#",
   styles = "",
   labelStyles = "",
   iconStyles = "",
 }) => {
   return (
-    <a
-      href={link}
+    <Link
+      to={nav}
       className={`cursor-pointer hover:bg-zinc-100 dark:hover:bg-stone-800 flex items-center gap-3 rounded p-2 py-1 group ${styles}`}
     >
       <div
@@ -24,7 +25,7 @@ const NavItems = ({
       >
         {label}
       </span>
-    </a>
+    </Link>
   );
 };
 
