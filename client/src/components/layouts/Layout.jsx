@@ -8,6 +8,8 @@ import WriteJournal from "../../pages/WriteJournal";
 import ViewJournal from "../../pages/ViewJournal";
 import Habit from "../../pages/Habit";
 import Memories from "../../pages/Memories";
+import Profile from "../../pages/Profile";
+import Trash from "../../pages/Trash";
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -40,7 +42,9 @@ const Layout = () => {
         </div>
 
 
-        <Memories />
+          <Trash />
+        {/* <Profile /> */}
+        {/* <Memories /> */}
         {/* <Habit /> */}
         {/* <ViewJournal /> */}
         {/* <WriteJournal /> */}
